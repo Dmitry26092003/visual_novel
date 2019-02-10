@@ -51,7 +51,7 @@ while running:
             xx = xx - (x-menu.get_width())//2
             yy = yy - (y-menu.get_height())//2            
             if 520 < yy < 595 and 25 < xx < 425:
-                pygame.quit()
+                running = False
         if event.type == pygame.MOUSEMOTION:
             xx, yy = pygame.mouse.get_pos()
             xx = xx - (x-menu.get_width())//2
