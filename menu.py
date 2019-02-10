@@ -29,15 +29,15 @@ screen = pygame.display.set_mode((0,0), pygame.FULLSCREEN)
 
 # создание окна 720 720
 #screen = pygame.display.set_mode((720, 720))
-pygame.mixer.music.load(os.path.join('data\music\menu.mp3'))
-pygame.mixer.music.play(-1)
+menu_music = pygame.mixer.Sound(os.path.join('data\music\menu.wav'))
+menu_music.play(-1)
+click_sound = pygame.mixer.Sound(os.path.join('data\music\click.wav'))
 screen.fill((0, 0, 0))
 pygame.display.flip()
 # рисование меню
 menu = load_image("menu\start_menu\main_0.png")
 screen.blit(menu, ((x-menu.get_width())//2, (y-menu.get_height())//2))
 pygame.display.flip()
-
 
 
 # Игровой цикл
