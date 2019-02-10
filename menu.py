@@ -2,8 +2,8 @@ import pygame
 import os
 from PIL import Image
 from ctypes  import *
-audio_fl = bool(open('settings.txt').read().split('\n')[0].split(' = ')[1])
-music_fl = bool(open('settings.txt').read().split('\n')[1].split(' = ')[1])
+audio_fl = bool(open('data\settings.txt').read().split('\n')[0].split(' = ')[1])
+music_fl = bool(open('data\settings.txt').read().split('\n')[1].split(' = ')[1])
 
 def load_image(name, colorkey=None):
     fullname = os.path.join('data', name)
@@ -34,7 +34,7 @@ def settings():
                 if 25 < xx < 280 and 340 < yy < 415:
                     fl = False
                     menu = load_image("menu\start_menu\main_0.png")
-                    open('settings.txt', 'w').write('audio_fl = {}\nmusic_fl = {}'.format(str(audio_fl), str(music_fl)))
+                    open('data\settings.txt', 'w').write('audio_fl = {}\nmusic_fl = {}'.format(str(audio_fl), str(music_fl)))
                 if 340 < xx < 401:
                     if 210 < yy < 238:
                         audio_fl = not audio_fl
@@ -102,7 +102,7 @@ while running:
                     os.system('python game.py')
                     pygame.quit()
                 elif 255 < yy < 330:
-                    open('progress.txt', 'w').write('1')
+                    open('data\progress.txt', 'w').write('1')
                     os.system('python game.py')
                     pygame.quit()                    
         if event.type == pygame.MOUSEMOTION:

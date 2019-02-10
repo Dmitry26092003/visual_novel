@@ -35,7 +35,7 @@ screen = pygame.display.set_mode((0,0), pygame.FULLSCREEN)
 screen.fill((0, 0, 0))
 pygame.display.flip()
 # рисование меню
-menu = load_image("game\{}.png".format(open('progress.txt').read()))
+menu = load_image("game\{}.png".format(open('data\progress.txt').read()))
 screen.blit(menu, ((x-menu.get_width())//2, (y-menu.get_height())//2))
 pygame.display.flip()
 # Игровой цикл
