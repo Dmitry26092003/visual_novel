@@ -73,8 +73,8 @@ screen = pygame.display.set_mode((0,0), pygame.FULLSCREEN)
 
 # создание окна 720 720
 #screen = pygame.display.set_mode((720, 720))
-pygame.mixer.music.load(os.path.join('data\music\menu.mp3'))
-pygame.mixer.music.play(-1)
+menu_music = pygame.mixer.Sound(os.path.join('data\music\menu.mp3'))
+menu_music(-1)
 screen.fill((0, 0, 0))
 pygame.display.flip()
 # рисование меню
@@ -96,16 +96,16 @@ while running:
             yy = yy - (y-menu.get_height())//2            
             if 25 < xx < 425:
                 if 520 < yy < 595:
-                    pygame.quit()
+                    running = False
                 elif 350 < yy < 430:
                     settings()
                 elif 170 < yy < 245:
                     os.system('python game.py')
-                    pygame.quit()
+                    running = False
                 elif 255 < yy < 330:
                     open('progress.txt', 'w').write('1')
                     os.system('python game.py')
-                    pygame.quit()                    
+                    running = False
         if event.type == pygame.MOUSEMOTION:
             xx, yy = pygame.mouse.get_pos()
             xx = xx - (x-menu.get_width())//2
