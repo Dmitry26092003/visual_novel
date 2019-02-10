@@ -29,7 +29,8 @@ screen = pygame.display.set_mode((0,0), pygame.FULLSCREEN)
 
 # создание окна 720 720
 #screen = pygame.display.set_mode((720, 720))
-
+pygame.mixer.music.load(os.path.join('data\music\menu.mp3'))
+pygame.mixer.music.play(-1)
 screen.fill((0, 0, 0))
 pygame.display.flip()
 # рисование меню
