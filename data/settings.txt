@@ -1,2 +1,2 @@
-1.audio = True
-2.music = False
+audio_fl = 1
+music_fl = 1
