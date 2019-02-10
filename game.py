@@ -2,8 +2,8 @@ import pygame
 import os
 from PIL import Image
 from ctypes  import *
-audio_fl = bool(open('settings.txt').read().split('\n')[0].split(' = ')[1])
-music_fl = bool(open('settings.txt').read().split('\n')[1].split(' = ')[1])
+audio_fl = bool(int(open('data\settings.txt').read().split('\n')[0].split(' = ')[1]))
+music_fl = bool(int(open('data\settings.txt').read().split('\n')[1].split(' = ')[1]))
 
 def load_image(name, colorkey=None):
     fullname = os.path.join('data', name)
