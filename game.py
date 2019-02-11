@@ -2,8 +2,8 @@ import pygame
 import os
 from PIL import Image
 from ctypes  import *
-audio_fl = bool(open('settings.txt').read().split('\n')[0].split(' = ')[1])
-music_fl = bool(open('settings.txt').read().split('\n')[1].split(' = ')[1])
+audio_fl = bool(int(open('data\settings.txt').read().split('\n')[0].split(' = ')[1]))
+music_fl = bool(int(open('data\settings.txt').read().split('\n')[1].split(' = ')[1]))
 
 def load_image(name, colorkey=None):
     fullname = os.path.join('data', name)
@@ -35,7 +35,7 @@ screen = pygame.display.set_mode((0,0), pygame.FULLSCREEN)
 screen.fill((0, 0, 0))
 pygame.display.flip()
 # рисование меню
-menu = load_image(os.path.join("game\{}.png".format(open('progress.txt').read())))
+menu = load_image("game\{}.png".format(open('data\progress.txt').read()))
 screen.blit(menu, ((x-menu.get_width())//2, (y-menu.get_height())//2))
 pygame.display.flip()
 # Игровой цикл

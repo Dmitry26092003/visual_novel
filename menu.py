@@ -2,9 +2,10 @@ import pygame
 import os
 from PIL import Image
 from ctypes  import *
-audio_fl = bool(open('settings.txt').read().split('\n')[0].split(' = ')[1])
-music_fl = bool(open('settings.txt').read().split('\n')[1].split(' = ')[1])
-
+import time
+audio_fl = bool(int(open('data\settings.txt').read().split('\n')[0].split(' = ')[1]))
+music_fl = bool(int(open('data\settings.txt').read().split('\n')[1].split(' = ')[1]))
+print(audio_fl, music_fl)
 def load_image(name, colorkey=None):
     fullname = os.path.join('data', name)
     try:
@@ -19,9 +20,36 @@ def load_image(name, colorkey=None):
         image.set_colorkey(colorkey)
     return image
 
+
+def exit():
+    global audio_fl
+    global music_fl
+    global menu_music
+    fl = True
+    screen.blit(exit_image, ((x-exit_image.get_width())//2, (y-exit_image.get_height())//2))
+    while fl:
+        for event in pygame.event.get():
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                xx, yy = pygame.mouse.get_pos()
+                xx = xx - (x-exit_image.get_width())//2
+                yy = yy - (y-exit_image.get_height())//2
+                if 20 < xx < 100 and 80 < yy < 120:
+                    if audio_fl:
+                        click_sound.play()
+                    time.sleep(1)
+                    return True
+                elif 120 < xx < 180 and 100 < yy < 120:
+                    if audio_fl:
+                        click_sound.play()
+                    return False
+        pygame.display.flip()
+                
+
+
 def settings():
     global audio_fl
     global music_fl
+    global menu_music
     fl = True
     menu = load_image("menu\settings\main.png")
     screen.blit(menu, ((x-menu.get_width())//2, (y-menu.get_height())//2))
@@ -32,18 +60,26 @@ def settings():
                 xx = xx - (x-menu.get_width())//2
                 yy = yy - (y-menu.get_height())//2
                 if 25 < xx < 280 and 340 < yy < 415:
+                    if audio_fl:
+                        click_sound.play()                    
                     fl = False
                     menu = load_image("menu\start_menu\main_0.png")
-                    open('settings.txt', 'w').write('audio_fl = {}\nmusic_fl = {}'.format(str(audio_fl), str(music_fl)))
                 if 340 < xx < 401:
                     if 210 < yy < 238:
+                        if audio_fl:
+                            click_sound.play()
                         audio_fl = not audio_fl
+                        open('data\settings.txt', 'w').write('audio_fl = {}\nmusic_fl = {}'.format(str(int(audio_fl)), str(int(music_fl))))
                     if 280 < yy < 308:
-                        music_fl = not music_fl
-                        if music_fl:
-                            menu_music.play()
+                        if audio_fl:
+                            click_sound.play()
+                        if not music_fl:
+                            menu_music = pygame.mixer.Sound(os.path.join('data\music\menu.wav'))
+                            menu_music.play(-1)
                         else:
-                            menu_music.stop()
+                            menu_music.stop()                            
+                        music_fl = not music_fl
+                        open('data\settings.txt', 'w').write('audio_fl = {}\nmusic_fl = {}'.format(str(int(audio_fl)), str(int(music_fl))))                        
             if event.type == pygame.MOUSEMOTION:
                 xx, yy = pygame.mouse.get_pos()
                 xx = xx - (x-menu.get_width())//2
@@ -77,10 +113,11 @@ screen = pygame.display.set_mode((0,0), pygame.FULLSCREEN)
 
 # создание окна 720 720
 #screen = pygame.display.set_mode((720, 720))
-#click_sound = pygame.mixer.Sound(os.path.join('sounds\click.wav'))
-menu_music = pygame.mixer.Sound(os.path.join('sounds\menu.wav'))
-click_sound = pygame.mixer.Sound(os.path.join('sounds\click.wav'))
-menu_music.play(-1)
+exit_image = load_image("menu\quit.png")
+if music_fl:
+    menu_music = pygame.mixer.Sound(os.path.join('data\music\menu.wav'))
+    menu_music.play(-1)
+click_sound = pygame.mixer.Sound(os.path.join('data\music\click.wav'))
 screen.fill((0, 0, 0))
 pygame.display.flip()
 # рисование меню
@@ -99,27 +136,33 @@ while running:
         if event.type == pygame.MOUSEBUTTONDOWN:
             xx, yy = pygame.mouse.get_pos()
             xx = xx - (x-menu.get_width())//2
-            yy = yy - (y-menu.get_height())//2            
+            yy = yy - (y-menu.get_height())//2
             if 25 < xx < 425:
                 if 520 < yy < 595:
-                    running = False
                     if audio_fl:
                         click_sound.play()
+                    
+                    pygame.display.flip()
+                    e = exit()
+                    if e:
+                        running = False
+                        pygame.display.flip()
+                    
                 elif 350 < yy < 430:
                     if audio_fl:
-                        click_sound.play()
+                        click_sound.play()                        
                     settings()
                 elif 170 < yy < 245:
                     if audio_fl:
-                        click_sound.play()
+                        click_sound.play()                        
                     os.system('python game.py')
                     running = False
                 elif 255 < yy < 330:
                     if audio_fl:
-                        click_sound.play()
-                    open('progress.txt', 'w').write('1')
+                        click_sound.play()                        
+                    open('data\progress.txt', 'w').write('1')
                     os.system('python game.py')
-                    running = False
+                    running = False                  
         if event.type == pygame.MOUSEMOTION:
             xx, yy = pygame.mouse.get_pos()
             xx = xx - (x-menu.get_width())//2
