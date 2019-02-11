@@ -98,7 +98,7 @@ def settings():
             music_bt = load_image("menu\{}\settings\on.png".format(size))
         else:
             music_bt = load_image("menu\{}\settings\off.png".format(size))
-        menu.transform(x, y)
+        menu = pygame.transform.scale(menu, (x, y))
         screen.blit(menu, ((x-menu.get_width())//2, (y-menu.get_height())//2))
         screen.blit(audio_bt, ((x-menu.get_width())//2 + 340, (y-menu.get_height())//2 + 210))
         screen.blit(music_bt, ((x-menu.get_width())//2 + 340, (y-menu.get_height())//2 + 280))
@@ -125,7 +125,7 @@ screen.fill((0, 0, 0))
 pygame.display.flip()
 # рисование меню
 menu = load_image("menu\{}\start_menu\main_0.png".format(size))
-menu.transform(x, y)
+menu = pygame.transform.scale(menu, (x, y))
 screen.blit(menu, ((x-menu.get_width())//2, (y-menu.get_height())//2))
 pygame.display.flip()
 
@@ -158,7 +158,7 @@ while running:
                         click_sound.play()                        
                     settings()
                     menu = load_image("menu\{}\start_menu\main_0.png".format(size))
-                    menu.transform(x, y)                    
+                    menu = pygame.transform.scale(menu, (x, y))               
                     screen.blit(menu, ((x-menu.get_width())//2, (y-menu.get_height())//2))                    
                     pygame.display.flip()                    
                 elif 170 < yy < 245:
@@ -179,37 +179,37 @@ while running:
             if 25 < xx < 425:
                 if 170 < yy < 245:
                     menu = load_image("menu\{}\start_menu\main_load_game.png".format(size))
-                    menu.transform(x, y)                    
+                    menu = pygame.transform.scale(menu, (x, y))               
                     screen.blit(menu, ((x-menu.get_width())//2, (y-menu.get_height())//2))
                     pygame.display.flip()
                 elif 255 < yy < 330:
                     menu = load_image("menu\{}\start_menu\main_new_game.png".format(size))
-                    menu.transform(x, y)                    
+                    menu = pygame.transform.scale(menu, (x, y))
                     screen.blit(menu, ((x-menu.get_width())//2, (y-menu.get_height())//2))
                     pygame.display.flip()
                 elif 350 < yy < 430:
                     menu = load_image("menu\{}\start_menu\main_settings.png".format(size))
-                    menu.transform(x, y)                    
+                    menu = pygame.transform.scale(menu, (x, y))                
                     screen.blit(menu, ((x-menu.get_width())//2, (y-menu.get_height())//2))
                     pygame.display.flip()
                 elif 440 < yy < 515:
                     menu = load_image("menu\{}\start_menu\main_info.png".format(size))
-                    menu.transform(x, y)                    
+                    menu = pygame.transform.scale(menu, (x, y))                 
                     screen.blit(menu, ((x-menu.get_width())//2, (y-menu.get_height())//2))
                     pygame.display.flip()
                 elif 520 < yy < 595:
                     menu = load_image("menu\{}\start_menu\main_exit.png".format(size))
-                    menu.transform(x, y)                    
+                    menu = pygame.transform.scale(menu, (x, y))                   
                     screen.blit(menu, ((x-menu.get_width())//2, (y-menu.get_height())//2))
                     pygame.display.flip()
                 else:
                     menu = load_image("menu\{}\start_menu\main_0.png".format(size))
-                    menu.transform(x, y)                    
+                    menu = pygame.transform.scale(menu, (x, y))                 
                     screen.blit(menu, ((x-menu.get_width())//2, (y-menu.get_height())//2))
                     pygame.display.flip()
             else:
                 menu = load_image("menu\{}\start_menu\main_0.png".format(size))
-                menu.transform(x, y)                
+                menu = pygame.transform.scale(menu, (x, y))               
                 screen.blit(menu, ((x-menu.get_width())//2, (y-menu.get_height())//2))
                 pygame.display.flip()                
     # обновление экрана
