@@ -6,6 +6,9 @@ import time
 audio_fl = bool(int(open('data\settings.txt').read().split('\n')[0].split(' = ')[1]))
 music_fl = bool(int(open('data\settings.txt').read().split('\n')[1].split(' = ')[1]))
 size = open('data\settings.txt').read().split('\n')[2].split(' = ')[1]
+print(audio_fl, music_fl)
+
+
 def load_image(name, colorkey=None):
     fullname = os.path.join('data', name)
     try:
@@ -72,6 +75,7 @@ def settings():
                         audio_fl = not audio_fl
                         open('data\settings.txt', 'w').write('audio_fl = {}\nmusic_fl = {}\nsize = HD'.format(str(int(audio_fl)), str(int(music_fl))))
                     elif 280*pix_new_y < yy < 308*pix_new_y:
+
                         if audio_fl:
                             click_sound.play()
                         if not music_fl:
@@ -150,7 +154,6 @@ while running:
                     if e:
                         running = False
                         pygame.display.flip()
-                    
                 elif 350*pix_new_y < yy < 430*pix_new_y:
                     if audio_fl:
                         click_sound.play()                        
