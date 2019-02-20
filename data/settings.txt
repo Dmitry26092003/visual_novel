@@ -1,3 +1,3 @@
 audio_fl = 1
 music_fl = 0
-size = FullHD
+size = HD
