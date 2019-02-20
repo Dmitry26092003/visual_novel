@@ -3,9 +3,10 @@ import os
 from PIL import Image
 from ctypes  import *
 import time
-audio_fl = bool(int(open('data\settings.txt').read().split('\n')[0].split(' = ')[1]))
-music_fl = bool(int(open('data\settings.txt').read().split('\n')[1].split(' = ')[1]))
-size = open('data\settings.txt').read().split('\n')[2].split(' = ')[1]
+print(open('data\settings.txt').read().split('\n'))
+audio_fl = bool(int(open('data\settings.txt').read().split('\n')[1].split(' = ')[1]))
+music_fl = bool(int(open('data\settings.txt').read().split('\n')[2].split(' = ')[1]))
+size = open('data\settings.txt').read().split('\n')[3].split(' = ')[1]
 print([size])
 def load_image(name, colorkey=None):
     fullname = os.path.join('data', name)
