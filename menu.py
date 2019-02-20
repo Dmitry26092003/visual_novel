@@ -3,12 +3,11 @@ import os
 from PIL import Image
 from ctypes  import *
 import time
-audio_fl = bool(int(open('data\settings.txt').read().split('\n')[0].split(' = ')[1]))
-music_fl = bool(int(open('data\settings.txt').read().split('\n')[1].split(' = ')[1]))
-size = open('data\settings.txt').read().split('\n')[2].split(' = ')[1]
-print(audio_fl, music_fl)
-
-
+print(open('data\settings.txt').read().split('\n'))
+audio_fl = bool(int(open('data\settings.txt').read().split('\n')[1].split(' = ')[1]))
+music_fl = bool(int(open('data\settings.txt').read().split('\n')[2].split(' = ')[1]))
+size = open('data\settings.txt').read().split('\n')[3].split(' = ')[1]
+print([size])
 def load_image(name, colorkey=None):
     fullname = os.path.join('data', name)
     try:
@@ -55,27 +54,82 @@ def settings():
     global music_fl
     global menu_music
     global x, y
+    global size
     fl = True
+    size_fl = False
     menu = load_image("menu\{}\settings\main.png".format(size))
     screen.blit(menu, (0, 0))
     while fl:
+        while size_fl:
+            for event in pygame.event.get():     
+                if event.type == pygame.MOUSEMOTION:
+                    xx, yy = pygame.mouse.get_pos()
+                    if 25*pix_new_x < xx < 280*pix_new_x:
+                        if 340*pix_new_y < yy < 415*pix_new_y:
+                            menu = load_image("menu\{}\settings\main_size_exit_green.png".format(size))                        
+                        elif 120*pix_new_y < yy < 185*pix_new_y:
+                            menu = load_image("menu\{}\settings\main_size_size_green.png".format(size))
+                        else:
+                            menu = load_image("menu\{}\settings\main_size.png".format(size))
+                    elif 450*pix_new_x < xx < 738*pix_new_x:
+                        if 110*pix_new_y < yy < 176*pix_new_y:
+                            menu = load_image("menu\{}\settings\main_size_hd_green.png".format(size))
+                        elif 190*pix_new_y < yy < 256*pix_new_y:
+                            menu = load_image("menu\{}\settings\main_size_fullhd_green.png".format(size))
+                        else:
+                            menu = load_image("menu\{}\settings\main_size.png".format(size))                            
+                    else:
+                        menu = load_image("menu\{}\settings\main_size.png".format(size))
+                        
+                if event.type == pygame.MOUSEBUTTONDOWN:
+                    xx, yy = pygame.mouse.get_pos()
+                    if 25*pix_new_x < xx < 280*pix_new_x:
+                        if 340*pix_new_y < yy < 415*pix_new_y:
+                            if audio_fl:
+                                click_sound.play()
+                            fl = False
+                            size_fl = False
+                            menu = load_image("menu\{}\settings\main_exit_green.png".format(size))
+                            open('data\settings.txt', 'w').write('audio_fl = {}\nmusic_fl = {}\nsize = {}'.format(str(int(audio_fl)), str(int(music_fl)), size))
+                        elif 120*pix_new_y < yy < 185*pix_new_y:
+                            if audio_fl:
+                                click_sound.play()                        
+                            size_fl = not size_fl
+                            menu = load_image("menu\{}\settings\main_size_green.png".format(size))
+                    elif 450*pix_new_x < xx < 738*pix_new_x:
+                        if 110*pix_new_y < yy < 176*pix_new_y:
+                            if audio_fl:
+                                click_sound.play()
+                            size = 'HD'
+                            menu = load_image("menu\{}\settings\main_size_hd_green.png".format(size))
+                        elif 190*pix_new_y < yy < 256*pix_new_y:
+                            if audio_fl:
+                                click_sound.play()
+                            size = 'FullHD'
+                            menu = load_image("menu\{}\settings\main_size_fullhd_green.png".format(size))
+            menu = pygame.transform.scale(menu, (x, y))
+            screen.blit(menu, (0, 0))
+            pygame.display.flip()            
         for event in pygame.event.get():
             if event.type == pygame.MOUSEBUTTONDOWN:
                 xx, yy = pygame.mouse.get_pos()
                 if 25*pix_new_x < xx < 280*pix_new_x:
                     if 340*pix_new_y < yy < 415*pix_new_y:
                         if audio_fl:
-                            click_sound.play()                    
+                            click_sound.play()
                         fl = False
-                    #elif 
+                        open('data\settings.txt', 'w').write('audio_fl = {}\nmusic_fl = {}\nsize = {}'.format(str(int(audio_fl)), str(int(music_fl)), size))
+                    elif 120*pix_new_y < yy < 185*pix_new_y:
+                        if audio_fl:
+                            click_sound.play()                        
+                        size_fl = not size_fl
+                        menu = load_image("menu\{}\settings\main_size_size_green.png".format(size))                        
                 if 340*pix_new_x < xx < 401*pix_new_x:
                     if 210*pix_new_y < yy < 238*pix_new_y:
                         if audio_fl:
                             click_sound.play()
                         audio_fl = not audio_fl
-                        open('data\settings.txt', 'w').write('audio_fl = {}\nmusic_fl = {}\nsize = HD'.format(str(int(audio_fl)), str(int(music_fl))))
                     elif 280*pix_new_y < yy < 308*pix_new_y:
-
                         if audio_fl:
                             click_sound.play()
                         if not music_fl:
@@ -84,11 +138,15 @@ def settings():
                         else:
                             menu_music.stop()                            
                         music_fl = not music_fl
-                        open('data\settings.txt', 'w').write('audio_fl = {}\nmusic_fl = {}\nsize = HD'.format(str(int(audio_fl)), str(int(music_fl))))                        
             if event.type == pygame.MOUSEMOTION:
                 xx, yy = pygame.mouse.get_pos()
-                if 25*pix_new_x < xx < 280*pix_new_x and 340*pix_new_y < yy < 415*pix_new_y:
-                    menu = load_image("menu\{}\settings\main_exit.png".format(size))
+                if 25*pix_new_x < xx < 280*pix_new_x:
+                    if 340*pix_new_y < yy < 415*pix_new_y:
+                        menu = load_image("menu\{}\settings\main_exit_green.png".format(size))                        
+                    elif 120*pix_new_y < yy < 185*pix_new_y:
+                        menu = load_image("menu\{}\settings\main_size_green.png".format(size))
+                    else:
+                        menu = load_image("menu\{}\settings\main.png".format(size))                    
                 else:
                     menu = load_image("menu\{}\settings\main.png".format(size))
         if audio_fl:
@@ -154,6 +212,7 @@ while running:
                     if e:
                         running = False
                         pygame.display.flip()
+                    
                 elif 350*pix_new_y < yy < 430*pix_new_y:
                     if audio_fl:
                         click_sound.play()                        
@@ -177,27 +236,27 @@ while running:
             xx, yy = pygame.mouse.get_pos()
             if 25*pix_new_x < xx < 425*pix_new_x:
                 if 170*pix_new_y < yy < 245*pix_new_y:
-                    menu = load_image("menu\{}\start_menu\main_load_game.png".format(size))
+                    menu = load_image("menu\{}\start_menu\main_load_game_green.png".format(size))
                     menu = pygame.transform.scale(menu, (x, y))               
                     screen.blit(menu, (0, 0))
                     pygame.display.flip()
                 elif 255*pix_new_y < yy < 330*pix_new_y:
-                    menu = load_image("menu\{}\start_menu\main_new_game.png".format(size))
+                    menu = load_image("menu\{}\start_menu\main_new_game_green.png".format(size))
                     menu = pygame.transform.scale(menu, (x, y))
                     screen.blit(menu, (0, 0))
                     pygame.display.flip()
                 elif 350*pix_new_y < yy < 430*pix_new_y:
-                    menu = load_image("menu\{}\start_menu\main_settings.png".format(size))
+                    menu = load_image("menu\{}\start_menu\main_settings_green.png".format(size))
                     menu = pygame.transform.scale(menu, (x, y))                
                     screen.blit(menu, (0, 0))
                     pygame.display.flip()
                 elif 440*pix_new_y < yy < 515*pix_new_y:
-                    menu = load_image("menu\{}\start_menu\main_info.png".format(size))
+                    menu = load_image("menu\{}\start_menu\main_info_green.png".format(size))
                     menu = pygame.transform.scale(menu, (x, y))                 
                     screen.blit(menu, (0, 0))
                     pygame.display.flip()
                 elif 520*pix_new_y < yy < 595*pix_new_y:
-                    menu = load_image("menu\{}\start_menu\main_exit.png".format(size))
+                    menu = load_image("menu\{}\start_menu\main_exit_green.png".format(size))
                     menu = pygame.transform.scale(menu, (x, y))                   
                     screen.blit(menu, (0, 0))
                     pygame.display.flip()
