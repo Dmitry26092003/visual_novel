@@ -3,10 +3,22 @@ import os
 from PIL import Image
 from ctypes  import *
 import time
+import pyautogui
+
 print(open('data\settings.txt').read().split('\n'))
-audio_fl = bool(int(open('data\settings.txt').read().split('\n')[1].split(' = ')[1]))
-music_fl = bool(int(open('data\settings.txt').read().split('\n')[2].split(' = ')[1]))
-size = open('data\settings.txt').read().split('\n')[3].split(' = ')[1]
+try:
+    f = open('data\settings.txt')
+    audio_fl = bool(int(f.read().split('\n')[0].split(' = ')[1]))
+    music_fl = bool(int(f.read().split('\n')[1].split(' = ')[1]))
+    size = open(f.read().split('\n')[2].split(' = ')[1])
+    f.close()
+except Exception:
+    f = open('data\settings.txt', 'w')    
+    f.write('audio_fl = 1\nmusic_fl = 1\nsize = FullHD')
+    f.close()    
+    audio_fl = 1
+    music_fl = 1
+    size = 'FullHD' 
 print([size])
 def load_image(name, colorkey=None):
     fullname = os.path.join('data', name)
@@ -251,6 +263,7 @@ print(pix_new_x, pix_new_y)
 menu = pygame.transform.scale(menu, (x, y))
 screen.blit(menu, (0, 0))
 pygame.display.flip()
+
 
 
 # Игровой цикл
