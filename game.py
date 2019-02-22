@@ -13,7 +13,8 @@ def beautifull_write(x, y, text, font = '14690.ttf', size = 70, k = 0.4, t = 0.5
         screen.blit(sim, (x, y))
         x += k*size
         pygame.display.flip()            
-        time.sleep(t)        
+        time.sleep(t)
+
 def load_image(name, colorkey=None):
     fullname = os.path.join('data', name)
     try:
