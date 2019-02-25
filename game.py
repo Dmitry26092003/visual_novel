@@ -19,15 +19,48 @@ except Exception:
     music_fl = 1
     size = 'FullHD' 
 
-def beautifull_write(x, y, text, font = '14690.ttf', size = 70, k = 0.4, t = 0.5):
+def beautifull_write(x, y, width, hight,
+                     text,
+                     font='14690.ttf', size=70,
+                     k=0.4,
+                     t=0.5,
+                     text_collor=(255, 255, 255), font_collor=None,
+                     shade=False, shade_collor=()):
     f = pygame.font.Font('data\\font\{}'.format(font), size)
-    for i in text:
-        sim = f.render(i, 1, (255, 255, 255))
-        screen.blit(sim, (x, y))
-        x += k*size
-        pygame.display.flip()            
-        time.sleep(t)
-
+    x *= k
+    y *= k
+    x_start = x
+    size *= k
+    y_max = f.render('А', 1, text_collor).get_rect()[3]
+    x_max = f.render('а', 1, text_collor).get_rect()[2]
+    if shade:
+        pass
+    else:
+        try:
+            text = text.split()
+            for i1 in range(len(text)):
+                for i2 in text[i1]:
+                    sim = f.render(i2, 1, text_collor, font_collor)
+                    print(i2)            
+                    screen.blit(sim, (x, y))
+                    x += x_max
+                    pygame.display.flip()            
+                    time.sleep(t)
+                print(len(text),'>',i1+1)
+                print(x + x_max*(len(text[i1+1])+1), '>=', width)
+                if (len(text) > i1+1) and (x + x_max*(len(text[i1+1])+1) >= width):
+                    x = x_start
+                    print('y_max = {}'.format(y_max))
+                    y += y_max
+                else:  
+                    sim = f.render(' ', 1, text_collor, font_collor)
+                    print(' ')            
+                    screen.blit(sim, (x, y))
+                    x += x_max
+                    pygame.display.flip()                                
+                time.sleep(t)
+        except Exception as a:
+            print(a)
 def load_image(name, colorkey=None):
     fullname = os.path.join('data', name)
     try:
@@ -50,10 +83,10 @@ y = windll.user32.GetSystemMetrics(1)
 pygame.init()
 
 # создание полноэкранного окна
-screen = pygame.display.set_mode((0,0), pygame.FULLSCREEN)
+#screen = pygame.display.set_mode((0,0), pygame.FULLSCREEN)
 
 # создание окна 720 720
-#screen = pygame.display.set_mode((720, 720))
+screen = pygame.display.set_mode((720, 720))
 
 screen.fill((0, 0, 0))
 pygame.display.flip()
@@ -63,7 +96,7 @@ pygame.display.flip()
 pygame.display.flip()
 
 
-
+p = 
 # Игровой цикл
 running = True
 while running:
@@ -81,7 +114,11 @@ while running:
             xx, yy = pygame.mouse.get_pos()
             xx = xx - (x-menu.get_width())//2
             yy = yy - (y-menu.get_height())//2'''
-    beautifull_write(200, 200, 'Привет мир!!!')
-    # обновление экрана
+    beautifull_write(200, 200, 500, 200, 'привет мир!!! привет мир!!! привет мир!!!')
+    
+    menu = load_image("menu\{}\game\{}.png".format(size,name))
+    menu = pygame.transform.scale(menu, (x, y))               
+    screen.blit(menu, (0, 0))                    
+    pygame.display.flip()     
     pygame.display.flip()
 pygame.quit()
