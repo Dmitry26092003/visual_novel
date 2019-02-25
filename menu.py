@@ -289,12 +289,12 @@ while running:
                     
                 elif 350*pix_new_y < yy < 430*pix_new_y:
                     if audio_fl:
-                        click_sound.play()                        
+                        click_sound.play()
                     settings()
                     menu = load_image("menu\{}\start_menu\main_0.png".format(size))
-                    menu = pygame.transform.scale(menu, (x, y))               
-                    screen.blit(menu, (0, 0))                    
-                    pygame.display.flip()                    
+                    menu = pygame.transform.scale(menu, (x, y))
+                    screen.blit(menu, (0, 0))
+                    pygame.display.flip()
                 elif 170*pix_new_y < yy < 245*pix_new_y:
                     if audio_fl:
                         click_sound.play()                        
