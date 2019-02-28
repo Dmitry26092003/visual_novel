@@ -24,7 +24,7 @@ def beautifull_write(x, y, width, hight,
                      text,
                      font='14690.ttf', size=70,
                      k=0.4,
-                     t=0.5,
+                     t=0.2,
                      text_collor=(255, 255, 255), font_collor=None,
                      shade=False, shade_collor=()):
     f = pygame.font.Font('data\\font\{}'.format(font), size)
@@ -33,7 +33,6 @@ def beautifull_write(x, y, width, hight,
     x_start = x
     size *= k
     y_max = f.render('А', 1, text_collor).get_rect()[3]
-    x_max = f.render('а', 1, text_collor).get_rect()[2]
     if shade:
         pass
     else:
@@ -44,20 +43,20 @@ def beautifull_write(x, y, width, hight,
                     sim = f.render(i2, 1, text_collor, font_collor)
                     print(i2)
                     screen.blit(sim, (x, y))
-                    x += x_max
+                    x += sim.get_rect()[2]
                     pygame.display.flip()
                     time.sleep(t)
                 print(len(text), '>', i1 + 1)
-                print(x + x_max * (len(text[i1 + 1]) + 1), '>=', width)
-                if (len(text) > i1 + 1) and (x + x_max * (len(text[i1 + 1]) + 1) >= width):
+                print(x + sim.get_rect()[2] * (len(text[i1 + 1]) + 1), '>=', width)
+                if (len(text) > i1 + 1) and (x + sim.get_rect()[2] * (len(text[i1 + 1]) + 1) >= width):
                     x = x_start
                     print('y_max = {}'.format(y_max))
                     y += y_max
                 else:
-                    sim = f.render(' ', 1, text_collor, font_collor)
-                    print(' ')
+                    sim = f.render('   ', 1, text_collor, font_collor)
+                    print('   ')
                     screen.blit(sim, (x, y))
-                    x += x_max
+                    x += sim.get_rect()[2]
                     pygame.display.flip()
                 time.sleep(t)
         except Exception as a:
@@ -102,6 +101,7 @@ pygame.display.flip()
 file_name = f'game\\{size}\\_'
 # Игровой цикл
 running = True
+game_fl = True
 while running:
     # обработка событий
     for event in pygame.event.get():
@@ -110,27 +110,36 @@ while running:
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_1:
                 file_name += '\\1'
+                game_fl = True
             if event.key == pygame.K_2:
                 file_name += '\\2'
+                game_fl = True
             if event.key == pygame.K_3:
                 file_name += '\\3'
+                game_fl = True
             if event.key == pygame.K_4:
                 file_name += '\\4'
+                game_fl = True
             if event.key == pygame.K_SPACE or event.key == pygame.K_KP_ENTER:
                 file_name += '\\_'
-    menu = load_image(f"{file_name}\\img.png")
-    menu = pygame.transform.scale(menu, (x, y))
-    screen.blit(menu, (0, 0))
+                game_fl = True
+    if game_fl:
+        game_fl = False
+        menu = load_image(f"{file_name}\\img.png")
+        menu = pygame.transform.scale(menu, (x, y))
+        screen.blit(menu, (0, 0))
 
-    # текст
-    try:
-        beautifull_write(200, 200, 500, 200, open(f"data\\{file_name}\\text.txt", 'r').read())
-    except Exception:
-        pass
-    # Выбор
-    try:
-        beautifull_write(200, 200, 500, 200, open(f"data\\{file_name}\\v.txt", 'r').read())
-    except Exception:
-        pass
-    pygame.display.flip()
+        # текст
+        try:
+            beautifull_write(200, 200, 1000, 500, open(f"data\\{file_name}\\text.txt", 'r').read())
+        except Exception:
+            time.sleep(1)
+            file_name += '\\_'
+            game_fl = True
+        # Выбор
+        try:
+            beautifull_write(200, 200, 500, 200, open(f"data\\{file_name}\\v.txt", 'r').read())
+        except Exception:
+            pass
+        pygame.display.flip()
 pygame.quit()
