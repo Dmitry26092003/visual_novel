@@ -1,7 +1,7 @@
 import pygame
 import os
 from PIL import Image
-from ctypes  import *
+from ctypes import *
 import time
 import pyautogui
 
@@ -12,12 +12,13 @@ try:
     size = open(f.read().split('\n')[2].split(' = ')[1])
     f.close()
 except Exception:
-    f = open('data\settings.txt', 'w')    
+    f = open('data\settings.txt', 'w')
     f.write('audio_fl = 1\nmusic_fl = 1\nsize = FullHD')
-    f.close()    
+    f.close()
     audio_fl = 1
     music_fl = 1
-    size = 'FullHD' 
+    size = 'FullHD'
+
 
 def beautifull_write(x, y, width, hight,
                      text,
@@ -41,26 +42,28 @@ def beautifull_write(x, y, width, hight,
             for i1 in range(len(text)):
                 for i2 in text[i1]:
                     sim = f.render(i2, 1, text_collor, font_collor)
-                    print(i2)            
+                    print(i2)
                     screen.blit(sim, (x, y))
                     x += x_max
-                    pygame.display.flip()            
+                    pygame.display.flip()
                     time.sleep(t)
-                print(len(text),'>',i1+1)
-                print(x + x_max*(len(text[i1+1])+1), '>=', width)
-                if (len(text) > i1+1) and (x + x_max*(len(text[i1+1])+1) >= width):
+                print(len(text), '>', i1 + 1)
+                print(x + x_max * (len(text[i1 + 1]) + 1), '>=', width)
+                if (len(text) > i1 + 1) and (x + x_max * (len(text[i1 + 1]) + 1) >= width):
                     x = x_start
                     print('y_max = {}'.format(y_max))
                     y += y_max
-                else:  
+                else:
                     sim = f.render(' ', 1, text_collor, font_collor)
-                    print(' ')            
+                    print(' ')
                     screen.blit(sim, (x, y))
                     x += x_max
-                    pygame.display.flip()                                
+                    pygame.display.flip()
                 time.sleep(t)
         except Exception as a:
             print(a)
+
+
 def load_image(name, colorkey=None):
     fullname = os.path.join('data', name)
     try:
@@ -75,6 +78,7 @@ def load_image(name, colorkey=None):
         image.set_colorkey(colorkey)
     return image
 
+
 # Размеры экрана
 x = windll.user32.GetSystemMetrics(0)
 y = windll.user32.GetSystemMetrics(1)
@@ -83,20 +87,19 @@ y = windll.user32.GetSystemMetrics(1)
 pygame.init()
 
 # создание полноэкранного окна
-#screen = pygame.display.set_mode((0,0), pygame.FULLSCREEN)
+screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
 
 # создание окна 720 720
-screen = pygame.display.set_mode((720, 720))
+# screen = pygame.display.set_mode((720, 720))
 
 screen.fill((0, 0, 0))
 pygame.display.flip()
 # рисование меню
-#menu = load_image("game\{}.png".format(open('data\progress.txt').read()))
-#screen.blit(menu, ((x-menu.get_width())//2, (y-menu.get_height())//2))
+# menu = load_image("game\{}.png".format(open('data\progress.txt').read()))
+# screen.blit(menu, ((x-menu.get_width())//2, (y-menu.get_height())//2))
 pygame.display.flip()
 
-
-p = 
+file_name = f'game\\{size}\\_'
 # Игровой цикл
 running = True
 while running:
@@ -104,21 +107,30 @@ while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
-        '''
-        if event.type == pygame.MOUSEBUTTONDOWN:
-            xx, yy = pygame.mouse.get_pos()
-            xx = xx - (x-menu.get_width())//2
-            yy = yy - (y-menu.get_height())//2            
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_1:
+                file_name += '\\1'
+            if event.key == pygame.K_2:
+                file_name += '\\2'
+            if event.key == pygame.K_3:
+                file_name += '\\3'
+            if event.key == pygame.K_4:
+                file_name += '\\4'
+            if event.key == pygame.K_SPACE or event.key == pygame.K_KP_ENTER:
+                file_name += '\\_'
+    menu = load_image(f"{file_name}\\img.png")
+    menu = pygame.transform.scale(menu, (x, y))
+    screen.blit(menu, (0, 0))
 
-        if event.type == pygame.MOUSEMOTION:
-            xx, yy = pygame.mouse.get_pos()
-            xx = xx - (x-menu.get_width())//2
-            yy = yy - (y-menu.get_height())//2'''
-    beautifull_write(200, 200, 500, 200, 'привет мир!!! привет мир!!! привет мир!!!')
-    
-    menu = load_image("menu\{}\game\{}.png".format(size,name))
-    menu = pygame.transform.scale(menu, (x, y))               
-    screen.blit(menu, (0, 0))                    
-    pygame.display.flip()     
+    # текст
+    try:
+        beautifull_write(200, 200, 500, 200, open(f"data\\{file_name}\\text.txt", 'r').read())
+    except Exception:
+        pass
+    # Выбор
+    try:
+        beautifull_write(200, 200, 500, 200, open(f"data\\{file_name}\\v.txt", 'r').read())
+    except Exception:
+        pass
     pygame.display.flip()
 pygame.quit()
