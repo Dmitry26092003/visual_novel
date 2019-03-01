@@ -8,12 +8,13 @@ import pyautogui
 print(open('data\settings.txt').read().split('\n'))
 try:
     f = open('data\settings.txt')
-    audio_fl = bool(int(f.read().split('\n')[0].split(' = ')[-1]))
-    music_fl = bool(int(f.read().split('\n')[1].split(' = ')[-1]))
-    size = open(f.read().split('\n')[2].split(' = ')[-1])
+    t = f.read().split('\n')
+    audio_fl = bool(int(t[0].split(' = ')[-1]))
+    music_fl = bool(int(t[1].split(' = ')[-1]))
+    size = t[2].split(' = ')[-1]
     f.close()
 except Exception as e:
-    print(e)
+    print(f'error: {e}')
     f = open('data\settings.txt', 'w')
     f.write('audio_fl = 1\nmusic_fl = 1\nsize = FullHD')
     f.close()
@@ -309,7 +310,6 @@ while running:
                     if e:
                         running = False
                         pygame.display.flip()
-
                 elif 350 * pix_new_y < yy < 430 * pix_new_y:
                     if audio_fl:
                         click_sound.play()
@@ -322,12 +322,14 @@ while running:
                     if audio_fl:
                         click_sound.play()
                     os.system('python game.py')
+                    pygame.quit()
                     running = False
                 elif 255 * pix_new_y < yy < 330 * pix_new_y:
                     if audio_fl:
                         click_sound.play()
                     open('data\saves\progress.txt', 'w').write('1')
                     os.system('python game.py')
+                    pygame.quit()
                     running = False
         if event.type == pygame.MOUSEMOTION:
             xx, yy = pygame.mouse.get_pos()

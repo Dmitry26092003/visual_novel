@@ -24,9 +24,11 @@ def beautifull_write(x, y, width, hight,
                      text,
                      font='14690.ttf', size=70,
                      k=0.4,
-                     t=0.2,
+                     t=0.05,
                      text_collor=(255, 255, 255), font_collor=None,
                      shade=False, shade_collor=()):
+    #tap_music = pygame.mixer.Sound(os.path.join('data\\music\\typewriter.wav'))
+    #tap_music.play(-1)
     f = pygame.font.Font('data\\font\{}'.format(font), size)
     x *= k
     y *= k
@@ -61,6 +63,7 @@ def beautifull_write(x, y, width, hight,
                 time.sleep(t)
         except Exception as a:
             print(a)
+    #tap_music.stop()
 
 
 def load_image(name, colorkey=None):
@@ -128,7 +131,6 @@ while running:
         menu = load_image(f"{file_name}\\img.png")
         menu = pygame.transform.scale(menu, (x, y))
         screen.blit(menu, (0, 0))
-
         # текст
         try:
             beautifull_write(200, 200, 1000, 500, open(f"data\\{file_name}\\text.txt", 'r').read())
