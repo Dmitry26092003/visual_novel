@@ -24,11 +24,11 @@ def beautifull_write(x, y, width, hight,
                      text,
                      font='14690.ttf', size=70,
                      k=0.4,
-                     t=0.05,
+                     t=0.06,
                      text_collor=(255, 255, 255), font_collor=None,
                      shade=False, shade_collor=()):
-    #tap_music = pygame.mixer.Sound(os.path.join('data\\music\\typewriter.wav'))
-    #tap_music.play(-1)
+    # tap_music = pygame.mixer.Sound(os.path.join('data\\music\\typewriter.wav'))
+    # tap_music.play(-1)
     f = pygame.font.Font('data\\font\{}'.format(font), size)
     x *= k
     y *= k
@@ -42,6 +42,10 @@ def beautifull_write(x, y, width, hight,
             text = text.split()
             for i1 in range(len(text)):
                 for i2 in text[i1]:
+                    for event in pygame.event.get():
+                        if event.type == pygame.KEYDOWN:
+                            if event.key == pygame.K_SPACE or event.key == pygame.K_KP_ENTER:
+                                t = 0
                     sim = f.render(i2, 1, text_collor, font_collor)
                     print(i2)
                     screen.blit(sim, (x, y))
@@ -50,7 +54,8 @@ def beautifull_write(x, y, width, hight,
                     time.sleep(t)
                 print(len(text), '>', i1 + 1)
                 print(x + sim.get_rect()[2] * (len(text[i1 + 1]) + 1), '>=', width)
-                if (len(text) > i1 + 1) and (x + sim.get_rect()[2] * (len(text[i1 + 1]) + 1) >= width):
+                if (len(text) > i1 + 1) and (
+                        x + sim.get_rect()[2] * (len(text[i1 + 1]) + 1) >= width):
                     x = x_start
                     print('y_max = {}'.format(y_max))
                     y += y_max
@@ -63,7 +68,7 @@ def beautifull_write(x, y, width, hight,
                 time.sleep(t)
         except Exception as a:
             print(a)
-    #tap_music.stop()
+    # tap_music.stop()
 
 
 def load_image(name, colorkey=None):
