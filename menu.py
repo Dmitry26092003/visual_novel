@@ -3,7 +3,7 @@ import os
 from PIL import Image
 from ctypes  import *
 import time
-import pyautogui
+#import pyautogui
 
 print(open('data\settings.txt').read().split('\n'))
 try:
