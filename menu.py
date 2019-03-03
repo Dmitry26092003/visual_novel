@@ -3,7 +3,7 @@ import os
 from PIL import Image
 from ctypes import *
 import time
-#import pyautogui
+# import pyautogui
 
 print(open('data\settings.txt').read().split('\n'))
 try:
@@ -45,7 +45,8 @@ def exit():
     global menu_music
     global x, y
     fl = True
-    screen.blit(exit_image, ((x - exit_image.get_width()) // 2, (y - exit_image.get_height()) // 2))
+    screen.blit(exit_image,
+                ((x - exit_image.get_width()) // 2, (y - exit_image.get_height()) // 2))
     while fl:
         for event in pygame.event.get():
             if event.type == pygame.MOUSEBUTTONDOWN:
@@ -148,9 +149,10 @@ def settings():
                             fl = False
                             size_fl = False
                             open('data\settings.txt', 'w').write(
-                                'audio_fl = {}\nmusic_fl = {}\nsize = {}'.format(str(int(audio_fl)),
-                                                                                 str(int(music_fl)),
-                                                                                 size))
+                                'audio_fl = {}\nmusic_fl = {}\nsize = {}'.format(
+                                    str(int(audio_fl)),
+                                    str(int(music_fl)),
+                                    size))
                             return None
                         elif 120 * pix_new_y < yy < 185 * pix_new_y:
                             if audio_fl:
@@ -321,16 +323,17 @@ while running:
                 elif 170 * pix_new_y < yy < 245 * pix_new_y:
                     if audio_fl:
                         click_sound.play()
+
                     os.system('python game.py')
-                    pygame.quit()
-                    running = False
                 elif 255 * pix_new_y < yy < 330 * pix_new_y:
                     if audio_fl:
                         click_sound.play()
-                    open('data\saves\progress.txt', 'w').write('1')
+                    os.system('cd data')
+                    os.system('echo progress.txt > game/FullHD')
+                    open(os.path.join('data/progress.txt'), 'wt').write('game\\FullHD\\_')
+                    print(open(os.path.join('data/progress.txt')).read())
+                    print(open(os.path.join('data/progress.txt')).read())
                     os.system('python game.py')
-                    pygame.quit()
-                    running = False
         if event.type == pygame.MOUSEMOTION:
             xx, yy = pygame.mouse.get_pos()
             if 25 * pix_new_x < xx < 425 * pix_new_x:

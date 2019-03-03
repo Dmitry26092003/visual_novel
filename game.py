@@ -3,7 +3,8 @@ import os
 from PIL import Image
 from ctypes import *
 import time
-import pyautogui
+
+# import pyautogui
 
 try:
     f = open('data\settings.txt')
@@ -35,6 +36,7 @@ def beautifull_write(x, y, width, hight,
     x_start = x
     size *= k
     y_max = f.render('А', 1, text_collor).get_rect()[3]
+    global running
     if shade:
         pass
     else:
@@ -46,6 +48,11 @@ def beautifull_write(x, y, width, hight,
                         if event.type == pygame.KEYDOWN:
                             if event.key == pygame.K_SPACE or event.key == pygame.K_KP_ENTER:
                                 t = 0
+                            if event.key == pygame.K_ESCAPE:
+                                with open(os.path.join('data/progress.txt'), 'wt') as f:
+                                    f.write(file_name)
+                                running = False
+                                break
                     sim = f.render(i2, 1, text_collor, font_collor)
                     print(i2)
                     screen.blit(sim, (x, y))
@@ -106,7 +113,9 @@ pygame.display.flip()
 # screen.blit(menu, ((x-menu.get_width())//2, (y-menu.get_height())//2))
 pygame.display.flip()
 
-file_name = f'game\\{size}\\_'
+file_name = open(os.path.join('data/progress.txt')).read()
+print(file_name)
+
 # Игровой цикл
 running = True
 game_fl = True
@@ -128,6 +137,11 @@ while running:
             if event.key == pygame.K_4:
                 file_name += '\\4'
                 game_fl = True
+            if event.key == pygame.K_ESCAPE:
+                with open(os.path.join('data/progress.txt'), 'wt') as f:
+                    f.write(file_name)
+                running = False
+                break
             if event.key == pygame.K_SPACE or event.key == pygame.K_KP_ENTER:
                 file_name += '\\_'
                 game_fl = True
