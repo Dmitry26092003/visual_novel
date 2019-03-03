@@ -4,6 +4,7 @@ from PIL import Image
 from ctypes import *
 import time
 import pyautogui
+import game
 
 print(open('data\settings.txt').read().split('\n'))
 try:
@@ -321,16 +322,21 @@ while running:
                 elif 170 * pix_new_y < yy < 245 * pix_new_y:
                     if audio_fl:
                         click_sound.play()
-                    os.system('python game.py')
-                    pygame.quit()
-                    running = False
+                    directory = sorted(os.listdir("data\saves"))[-1]
+                    game.game(audio_fl=audio_fl, music_fl=music_fl, size=size, file_name=open(
+                        f'data\\saves\\{directory}').read())
+                    menu = load_image("menu\{}\start_menu\main_0.png".format(size))
+                    menu = pygame.transform.scale(menu, (x, y))
+                    screen.blit(menu, (0, 0))
+                    pygame.display.flip()
                 elif 255 * pix_new_y < yy < 330 * pix_new_y:
                     if audio_fl:
                         click_sound.play()
-                    open('data\saves\progress.txt', 'w').write('1')
-                    os.system('python game.py')
-                    pygame.quit()
-                    running = False
+                    game.game(audio_fl=audio_fl, music_fl=music_fl, size=size)
+                    menu = load_image("menu\{}\start_menu\main_0.png".format(size))
+                    menu = pygame.transform.scale(menu, (x, y))
+                    screen.blit(menu, (0, 0))
+                    pygame.display.flip()
         if event.type == pygame.MOUSEMOTION:
             xx, yy = pygame.mouse.get_pos()
             if 25 * pix_new_x < xx < 425 * pix_new_x:
@@ -376,6 +382,4 @@ while running:
                 screen.blit(menu, (0, 0))
                 pygame.display.update((36 * pix_new_x, 250 * pix_new_y),
                                       (598 * pix_new_x, 641 * pix_new_y))
-                # обновление экрана
-    pygame.display.flip()
 pygame.quit()
