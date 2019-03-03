@@ -3,7 +3,6 @@ import os
 from PIL import Image
 from ctypes import *
 import time
-# import pyautogui
 
 print(open('data\settings.txt').read().split('\n'))
 try:
@@ -379,6 +378,4 @@ while running:
                 screen.blit(menu, (0, 0))
                 pygame.display.update((36 * pix_new_x, 250 * pix_new_y),
                                       (598 * pix_new_x, 641 * pix_new_y))
-                # обновление экрана
-    pygame.display.flip()
 pygame.quit()
