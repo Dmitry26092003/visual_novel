@@ -1,20 +1,19 @@
 import pygame
 import os
-from PIL import Image
 from ctypes import *
 import time
 import game
 
-print(open('data\settings.txt').read().split('\n'))
+print(open('data\\settings.txt').read().split('\n'))
 try:
-    f = open('data\settings.txt')
+    f = open('data\\settings.txt')
     t = f.read().split('\n')
     audio_fl = bool(int(t[0].split(' = ')[-1]))
     music_fl = bool(int(t[1].split(' = ')[-1]))
     size = t[2].split(' = ')[-1]
     f.close()
 except Exception as e:
-    print(f'error: {e}')
+    print(f'error: {str(e)}')
     f = open('data\settings.txt', 'w')
     f.write('audio_fl = 1\nmusic_fl = 1\nsize = FullHD')
     f.close()
@@ -323,13 +322,20 @@ while running:
                 elif 170 * pix_new_y < yy < 245 * pix_new_y:
                     if audio_fl:
                         click_sound.play()
-
+                    if music_fl:
+                        menu_music.stop()
                     game.game(audio_fl, music_fl, size, open(os.path.join(
                         "data/progress.txt")).read())
+                    if music_fl:
+                        menu_music.play(-1)
                 elif 255 * pix_new_y < yy < 330 * pix_new_y:
                     if audio_fl:
                         click_sound.play()
-                    game.game(audio_fl, music_fl, size, "game/FullHD/_/")
+                    if music_fl:
+                        menu_music.stop()
+                    game.game(audio_fl, music_fl, size, "game\\FullHD\\_\\")
+                    if music_fl:
+                        menu_music.play(-1)
         if event.type == pygame.MOUSEMOTION:
             xx, yy = pygame.mouse.get_pos()
             if 25 * pix_new_x < xx < 425 * pix_new_x:
