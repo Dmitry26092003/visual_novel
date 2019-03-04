@@ -2,11 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="736274dc-b115-4031-8780-b0fa6dcc5f7d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/data/game/FullHD/_/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/game/FullHD/_/text.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/progress.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/progress.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scren/snapshot16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scren/snapshot17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scren/snapshot18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scren/snapshot19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scren/snapshot20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scren/snapshot21.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scren/snapshot22.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scren/snapshot23.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scren/snapshot24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scren/snapshot25.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scren/snapshot26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scren/snapshot27.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scren/snapshot28.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scren/snapshot29.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scren/snapshot30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scren/snapshot31.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scren/snapshot32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scren/snapshot33.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scren/snapshot34.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scren/snapshot35.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/data/settings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/settings.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/game.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/menu.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,20 +37,21 @@
     <session id="-1025689728">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.36" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="151" />
+          <entry key="py" value="154" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="151" />
+          <entry key="Python" value="154" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -51,8 +71,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/game.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="58" column="30" lean-forward="true" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
+            <state relative-caret-position="108">
+              <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -63,7 +83,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/menu.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="498">
+              <caret line="90" column="28" lean-forward="true" selection-start-line="90" selection-start-column="28" selection-end-line="90" selection-end-column="28" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -95,6 +116,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -106,7 +128,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="RunDashboard">
@@ -215,19 +236,20 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/game.py">
+    <entry file="file://$PROJECT_DIR$/menu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="58" column="30" lean-forward="true" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
+        <state relative-caret-position="498">
+          <caret line="90" column="28" lean-forward="true" selection-start-line="90" selection-start-column="28" selection-end-line="90" selection-end-column="28" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/menu.py">
+    <entry file="file://$PROJECT_DIR$/game.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="108">
+          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>

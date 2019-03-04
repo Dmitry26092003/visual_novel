@@ -64,7 +64,7 @@ def beautifull_write(x, y, width, hight,
                     pygame.display.flip()
                 time.sleep(t)
         except Exception as a:
-            print(a)
+            print(str(a))
     # tap_music.stop()
 
 
