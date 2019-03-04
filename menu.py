@@ -3,6 +3,7 @@ import os
 from PIL import Image
 from ctypes import *
 import time
+import game
 
 print(open('data\settings.txt').read().split('\n'))
 try:
@@ -323,16 +324,12 @@ while running:
                     if audio_fl:
                         click_sound.play()
 
-                    os.system('python game.py')
+                    game.game(audio_fl, music_fl, size, open(os.path.join(
+                        "data/progress.txt")).read())
                 elif 255 * pix_new_y < yy < 330 * pix_new_y:
                     if audio_fl:
                         click_sound.play()
-                    os.system('cd data')
-                    os.system('echo progress.txt > game/FullHD')
-                    open(os.path.join('data/progress.txt'), 'wt').write('game\\FullHD\\_')
-                    print(open(os.path.join('data/progress.txt')).read())
-                    print(open(os.path.join('data/progress.txt')).read())
-                    os.system('python game.py')
+                    game.game(audio_fl, music_fl, size, "game/FullHD/_/")
         if event.type == pygame.MOUSEMOTION:
             xx, yy = pygame.mouse.get_pos()
             if 25 * pix_new_x < xx < 425 * pix_new_x:
