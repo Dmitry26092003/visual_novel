@@ -1,0 +1,13 @@
+Creators:
+	Balahonsky Dmitry
+	Kosminin Daniel
+
+Management:
+	Choose the plot "1"	- 1
+	Choose the plot "2"	- 2
+	Choose the plot "3"	- 3
+	Choose the plot "4"	- 4
+	Next scene		- SPACE (Space)
+	Pause + save		- Esc
+	Save			- S
+	Loading saves		- L (under development)

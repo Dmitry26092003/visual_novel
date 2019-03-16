@@ -1,8 +1,9 @@
-import pygame
 import os
-from PIL import Image
-from ctypes import *
 import time
+from ctypes import *
+
+import pygame
+
 import pyautogui
 import game
 
@@ -22,7 +23,7 @@ except Exception as e:
     audio_fl = 1
     music_fl = 1
     size = 'FullHD'
-print([size])
+print([audio_fl, music_fl, size])
 
 
 def load_image(name, colorkey=None):
@@ -315,6 +316,24 @@ while running:
                     if audio_fl:
                         click_sound.play()
                     settings()
+                    menu = load_image("menu\{}\start_menu\main_0.png".format(size))
+                    menu = pygame.transform.scale(menu, (x, y))
+                    screen.blit(menu, (0, 0))
+                    pygame.display.flip()
+                elif 440 * pix_new_y < yy < 515 * pix_new_y:
+                    if audio_fl:
+                        click_sound.play()
+                    f_info = True
+                    while f_info:
+                        for event2 in pygame.event.get():
+                            if event2.type == pygame.KEYDOWN and event2.key == pygame.K_ESCAPE:
+                                f_info = False
+                                if audio_fl:
+                                    click_sound.play()
+                        menu = load_image("menu\{}\info.png".format(size))
+                        menu = pygame.transform.scale(menu, (x, y))
+                        screen.blit(menu, (0, 0))
+                        pygame.display.flip()
                     menu = load_image("menu\{}\start_menu\main_0.png".format(size))
                     menu = pygame.transform.scale(menu, (x, y))
                     screen.blit(menu, (0, 0))

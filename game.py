@@ -1,10 +1,9 @@
-import pygame
-import os
-from PIL import Image
-from ctypes import *
-import time
-import pyautogui
 import datetime
+import os
+import time
+from ctypes import *
+
+import pygame
 
 try:
     f = open('data\settings.txt')
@@ -22,12 +21,10 @@ except Exception:
 
 
 def game(audio_fl, music_fl, size, file_name=''):
-    s = f'game\\{size}\\_'
-
     def beautifull_write(x, y, width, hight,
                          text,
-                         font='14690.ttf', size=70,
-                         k=0.4,
+                         font='14690.ttf', size=35,
+                         k=1,
                          t=0.06,
                          text_collor=(255, 255, 255), font_collor=None,
                          shade=False, shade_collor=()):
@@ -43,30 +40,33 @@ def game(audio_fl, music_fl, size, file_name=''):
             pass
         else:
             try:
-                text = text.split()
-                for i1 in range(len(text)):
-                    for i2 in text[i1]:
-                        for event in pygame.event.get():
-                            if event.type == pygame.KEYDOWN:
-                                if event.key == pygame.K_SPACE or event.key == pygame.K_KP_ENTER:
-                                    t = 0
-                                if event.key == pygame.K_ESCAPE:
-                                    raise SystemExit
-                        sim = f.render(i2, 1, text_collor, font_collor)
-                        screen.blit(sim, (x, y))
-                        x += sim.get_rect()[2]
-                        pygame.display.flip()
+                for text1 in text.split('\n'):
+                    text = text1.split()
+                    for i1 in range(len(text)):
+                        for i2 in text[i1]:
+                            for event in pygame.event.get():
+                                if event.type == pygame.KEYDOWN:
+                                    if event.key == pygame.K_SPACE or event.key == pygame.K_KP_ENTER:
+                                        t = 0
+                                    if event.key == pygame.K_ESCAPE:
+                                        raise SystemExit
+                            sim = f.render(i2, 1, text_collor, font_collor)
+                            screen.blit(sim, (x, y))
+                            x += sim.get_rect()[2]
+                            pygame.display.flip()
+                            time.sleep(t)
+                        if (len(text) > i1 + 1) and (
+                                x + sim.get_rect()[2] * (len(text[i1 + 1]) + 1) >= width):
+                            x = x_start
+                            y += y_max
+                        else:
+                            sim = f.render('   ', 1, text_collor, font_collor)
+                            screen.blit(sim, (x, y))
+                            x += sim.get_rect()[2]
+                            pygame.display.flip()
                         time.sleep(t)
-                    if (len(text) > i1 + 1) and (
-                            x + sim.get_rect()[2] * (len(text[i1 + 1]) + 1) >= width):
-                        x = x_start
-                        y += y_max
-                    else:
-                        sim = f.render('   ', 1, text_collor, font_collor)
-                        screen.blit(sim, (x, y))
-                        x += sim.get_rect()[2]
-                        pygame.display.flip()
-                    time.sleep(t)
+                    x = x_start
+                    y += y_max
             except Exception as a:
                 print(a)
         # tap_music.stop()
@@ -84,6 +84,8 @@ def game(audio_fl, music_fl, size, file_name=''):
                 colorkey = image.get_at((0, 0))
             image.set_colorkey(colorkey)
         return image
+
+    s = f'game\\{size}\\_'
 
     # Размеры экрана
     x = windll.user32.GetSystemMetrics(0)
@@ -115,17 +117,21 @@ def game(audio_fl, music_fl, size, file_name=''):
                 running = False
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_1:
-                    file_name += '\\1'
-                    game_fl = True
+                    if '1' in os.listdir(path=f"data\\{s + file_name}"):
+                        file_name += '\\1'
+                        game_fl = True
                 if event.key == pygame.K_2:
-                    file_name += '\\2'
-                    game_fl = True
+                    if '2' in os.listdir(path=f"data\\{s + file_name}"):
+                        file_name += '\\2'
+                        game_fl = True
                 if event.key == pygame.K_3:
-                    file_name += '\\3'
-                    game_fl = True
+                    if '3' in os.listdir(path=f"data\\{s + file_name}"):
+                        file_name += '\\3'
+                        game_fl = True
                 if event.key == pygame.K_4:
-                    file_name += '\\4'
-                    game_fl = True
+                    if '4' in os.listdir(path=f"data\\{s + file_name}"):
+                        file_name += '\\4'
+                        game_fl = True
                 if event.key == pygame.K_s:  # Сохранение
                     with open(
                             f"data\\saves\\{'.'.join(str(datetime.datetime.now()).split(':'))}.txt",
@@ -135,10 +141,10 @@ def game(audio_fl, music_fl, size, file_name=''):
                     pass
                 if event.key == pygame.K_ESCAPE:
                     running = False
-
                 if event.key == pygame.K_SPACE or event.key == pygame.K_KP_ENTER:
-                    file_name += '\\_'
-                    game_fl = True
+                    if '_' in os.listdir(path=f"data\\{s + file_name}"):
+                        file_name += '\\_'
+                        game_fl = True
         if game_fl:
             try:
                 game_fl = False
@@ -147,17 +153,68 @@ def game(audio_fl, music_fl, size, file_name=''):
                 screen.blit(menu, (0, 0))
                 # текст
                 try:
-                    beautifull_write(200, 200, 1000, 500,
-                                     open(f"data\\{s + file_name}\\text.txt", 'r').read())
-                except Exception:
-                    time.sleep(1)
+                    tex_bar = load_image(f"game\\{size}\\text_bar.png")
+                    tex_bar = pygame.transform.scale(tex_bar,
+                                                     (int(1820 * x / 1920), int(150 * y / 1080)))
+                    screen.blit(tex_bar, (int(50 * x / 1920), int(900 * y / 1080)))
+                    beautifull_write(int(55 * x / 1920), int(910 * y / 1080), int(1720 * x / 1920),
+                                     int(150 * y / 1080),
+                                     open(f"data\\{s + file_name}\\text.txt", 'r').read(), size=35)
+                except Exception as a:
+                    print(a)
+                    time.sleep(0.5)
                     file_name += '\\_'
                     game_fl = True
+                k = (x // 1280)
                 # Выбор
                 try:
-                    beautifull_write(200, 200, 500, 200,
-                                     open(f"data\\{s + file_name}\\v.txt", 'r').read())
-                except Exception:
+                    f = open(f"data\\{s + file_name}\\1.txt", 'r').read()
+                    tex_bar_1 = load_image(f"game\\{size}\\text_bar_2.png")
+                    tex_bar_1 = pygame.transform.scale(tex_bar_1,
+                                                       (int(620 * x / 1920), int(50 * y / 1080)))
+                    screen.blit(tex_bar_1, (int(50 * x / 1920), int(845 * y / 1080)))
+                    beautifull_write(int(55 * x / 1920), int(850 * y / 1080), int(600 * x / 1920),
+                                     int(45 * y / 1080),
+                                     f,
+                                     text_collor=(255, 0, 0), size=30)
+                except Exception as a:
+                    pass
+                try:
+                    f = open(f"data\\{s + file_name}\\2.txt", 'r').read()
+
+                    tex_bar_2 = load_image(f"game\\{size}\\text_bar_2.png")
+                    tex_bar_2 = pygame.transform.scale(tex_bar_2,
+                                                       (int(620 * x / 1920), int(50 * y / 1080)))
+                    screen.blit(tex_bar_2, (int(50 * x / 1920), int(790 * y / 1080)))
+                    beautifull_write(int(55 * x / 1920), int(795 * y / 1080), int(600 * x / 1920),
+                                     int(45 * y / 1080),
+                                     f,
+                                     text_collor=(255, 0, 0), size=30)
+                except Exception as a:
+                    pass
+                try:
+                    f = open(f"data\\{s + file_name}\\3.txt", 'r').read()
+                    tex_bar_3 = load_image(f"game\\{size}\\text_bar_2.png")
+                    tex_bar_3 = pygame.transform.scale(tex_bar_3,
+                                                       (int(620 * x / 1920), int(50 * y / 1080)))
+                    screen.blit(tex_bar_3, (int(50 * x / 1920), int(735 * y / 1080)))
+                    beautifull_write(int(55 * x / 1920), int(740 * y / 1080), int(600 * x / 1920),
+                                     int(45 * y / 1080),
+                                     f,
+                                     text_collor=(255, 0, 0), size=30)
+                except Exception as a:
+                    pass
+                try:
+                    f = open(f"data\\{s + file_name}\\4.txt", 'r').read()
+                    tex_bar_4 = load_image(f"game\\{size}\\text_bar_2.png")
+                    tex_bar_4 = pygame.transform.scale(tex_bar_4,
+                                                       (int(620 * x / 1920), int(50 * y / 1080)))
+                    screen.blit(tex_bar_4, (int(50 * x / 1920), int(680 * y / 1080)))
+                    beautifull_write(int(55 * x / 1920), int(685 * y / 1080), int(600 * x / 1920),
+                                     int(45 * y / 1080),
+                                     f,
+                                     text_collor=(255, 0, 0), size=30)
+                except Exception as a:
                     pass
                 pygame.display.flip()
             except SystemExit:
