@@ -227,4 +227,4 @@ def game(audio_fl, music_fl, size, file_name=''):
 
 if __name__ == '__main__':
     game(audio_fl=audio_fl, music_fl=music_fl, size=size)
-    pygame.quit()
+    pygame.quit() 

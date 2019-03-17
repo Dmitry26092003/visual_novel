@@ -2,123 +2,95 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d3c4341-19e0-457a-8370-347cbff09f03" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/visual_novel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/visual_novel.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/img.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/img.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/img.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/img.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/snapshot35.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/game/FullHD/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/game/FullHD/_/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/game/FullHD/_/text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-03 22.44.39.189420.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/saves/2019-03-03 22.44.39.189420.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-06 15.27.34.646927.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/saves/2019-03-06 15.27.34.646927.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-06 15.27.40.947567.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-06 16.16.57.980926.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/saves/2019-03-06 16.16.57.980926.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-10 19.45.33.845841.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-11 12.57.22.256411.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-11 12.58.11.003021.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-11 13.00.24.921400.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-11 13.11.49.621876.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-11 13.12.06.929138.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-11 13.12.10.874149.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-11 13.23.23.536233.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/saves/2019-03-11 13.23.23.536233.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-11 13.24.09.877706.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-11 13.29.01.430975.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-11 13.39.26.388580.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/saves/2019-03-11 13.39.26.388580.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-11 13.40.52.188751.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-11 13.41.49.652439.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-11 13.43.44.501525.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-11 13.44.37.995877.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/saves/2019-03-11 13.44.37.995877.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-11 13.50.31.613473.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-11 14.02.46.577579.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/saves/2019-03-11 14.02.46.577579.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-11 15.06.47.430277.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-11 15.06.49.884315.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-11 15.07.20.435303.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-11 15.57.59.392523.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-11 20.04.40.900908.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-11 20.15.46.539434.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-11 20.18.23.412728.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-11 20.40.29.852855.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-11 20.41.41.390308.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-15 16.29.57.995793.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-15 16.30.19.081818.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-15 16.31.41.004987.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/saves/2019-03-15 16.31.41.004987.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-15 16.38.49.225261.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-15 16.41.55.168327.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-15 16.49.24.746149.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-15 16.50.23.612448.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-15 16.51.59.793105.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-15 16.52.13.327599.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-15 16.55.00.803326.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-15 16.57.11.318638.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-15 16.58.51.115186.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-15 21.59.48.662427.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-15 21.59.53.285282.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-15 22.10.25.377042.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-15 22.12.43.882432.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-15 22.12.49.189416.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-15 22.12.52.912606.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-15 22.14.30.196231.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-15 22.14.32.498252.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-15 22.16.32.291695.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-15 22.16.46.637000.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-15 22.17.52.459482.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-15 22.20.44.740873.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-15 22.22.44.010854.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-15 22.25.41.483528.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-15 22.27.13.063025.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-15 22.29.05.386462.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-16 13.42.20.869655.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-16 13.42.22.553734.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-16 13.50.02.829460.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scren/snapshot16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scren/snapshot17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scren/snapshot18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scren/snapshot19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scren/snapshot20.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scren/snapshot21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scren/snapshot22.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scren/snapshot23.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scren/snapshot24.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scren/snapshot25.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scren/snapshot26.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scren/snapshot27.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scren/snapshot28.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scren/snapshot29.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scren/snapshot30.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scren/snapshot31.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scren/snapshot32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scren/snapshot33.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scren/snapshot34.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scren/snapshot37.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/1/2019-03-15_23-01-05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/2/2019-03-15_23-01-05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/_/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/_/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/_/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/_/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/_/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/_/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/_/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/_/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/2/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/game/FullHD/text.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/data/settings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/settings.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/game.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/menu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stsenariy.docx" beforeDir="false" afterPath="$PROJECT_DIR$/stsenariy.docx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -131,8 +103,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/game.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="221" lean-forward="true" selection-start-line="221" selection-end-line="221" />
+            <state relative-caret-position="489">
+              <caret line="226" lean-forward="true" selection-start-line="226" selection-end-line="226" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -143,7 +115,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/menu.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-136">
+            <state relative-caret-position="68">
               <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
             </state>
           </provider>
@@ -174,7 +146,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="950" />
     <option name="width" value="980" />
     <option name="height" value="1040" />
@@ -185,7 +157,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -208,6 +179,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -356,15 +328,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="839" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1698612" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36827195" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36775106" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -461,20 +432,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/menu.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/game.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="221" lean-forward="true" selection-start-line="221" selection-end-line="221" />
+        <state relative-caret-position="489">
+          <caret line="226" lean-forward="true" selection-start-line="226" selection-end-line="226" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/menu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
