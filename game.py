@@ -219,7 +219,6 @@ def game(audio_fl, music_fl, size, file_name=''):
                 pygame.display.flip()
             except SystemExit:
                 running = False
-
     with open(
             f"data\\saves\\{'.'.join(str(datetime.datetime.now()).split(':'))}.txt", 'w') as save:
         save.write(file_name)
