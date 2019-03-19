@@ -3,8 +3,29 @@
   <component name="ChangeListManager">
     <list default="true" id="1d3c4341-19e0-457a-8370-347cbff09f03" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/game/FullHD/_/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/game/FullHD/_/1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/game.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-17 11.22.30.341103.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-17 11.22.37.490144.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-17 11.25.51.181529.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-17 11.27.20.064120.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-17 12.08.29.150442.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-17 16.09.18.931385.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-17 16.10.17.711632.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-17 16.10.23.632644.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-17 16.10.38.046043.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-17 19.07.37.321857.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-17 19.07.40.853503.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-17 19.07.43.819679.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-17 19.09.16.348548.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-17 19.18.30.097065.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-17 19.22.37.021795.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-17 19.25.42.921749.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-17 19.50.23.727870.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-18 08.02.40.049935.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-18 08.08.55.167348.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-18 08.11.57.624138.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/2019-03-18 08.12.13.602460.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/poyasnitelnaya_zapiska_avtovosstanovlenie.docx" beforeDir="false" afterPath="$PROJECT_DIR$/poyasnitelnaya_zapiska_avtovosstanovlenie.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Презентация без названия.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/Презентация без названия.pptx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,11 +35,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="224" lean-forward="true" selection-start-line="224" selection-end-line="224" />
+            <state relative-caret-position="391">
+              <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -26,10 +47,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/menu.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
+            <state relative-caret-position="-391">
               <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
             </state>
           </provider>
@@ -61,8 +82,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="490" />
-    <option name="y" value="90" />
+    <option name="x" value="950" />
     <option name="width" value="980" />
     <option name="height" value="1040" />
   </component>
@@ -244,7 +264,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="839" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1698612" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -350,8 +369,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/game.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="224" lean-forward="true" selection-start-line="224" selection-end-line="224" />
+        <state relative-caret-position="391">
+          <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
@@ -360,7 +379,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/menu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
+        <state relative-caret-position="-391">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
